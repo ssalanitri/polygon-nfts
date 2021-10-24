@@ -3,7 +3,8 @@
     "test": "npx hardhat test",
     "deploy": "npx hardhat run scripts/deploy-script.js --network matic",
     "mint": "npx hardhat run scripts/mint-script.js --network matic",
-    "get-token": "npx hardhat run scripts/get-token-script.js --network matic"
+    "get-token": "npx hardhat run scripts/get-token-script.js --network matic",
+    "ipfs-add": "node scripts/add-image-to-ipfs.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,11 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.2.0",
-    "dotenv": "^10.0.0"
-  }
+    "@pinata/sdk": "^1.1.23",
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "form-data": "^4.0.0",
+    "ipfs-http-client": "^51.0.1"
+  },
+  "type": "module"
 }
